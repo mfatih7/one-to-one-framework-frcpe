@@ -19,5 +19,15 @@ python yfcc.py
 ```
 This may take a couple of hours.
 
+## Generate pickle files from .hdf5 Files
+
+Clone the current [one-to-one-framework-frcpe](https://github.com/mfatih7/one-to-one-framework-frcpe) repo.
+
+Generate a folder named `01_featureMatchingDatasets` to the same directory level with the cloned `one-to-one-framework-frcpe` repo folder.
+
+Copy the generated `yfcc-sift-2000-train.hdf5`, `yfcc-sift-2000-val.hdf5`, and `yfcc-sift-2000-test.hdf5` files into `01_featureMatchingDatasets` folder.
+
+
+
 
 
