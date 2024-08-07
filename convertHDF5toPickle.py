@@ -4,22 +4,22 @@ import h5py
 import pickle
 
 class ConvertHDF5toPickle:
-    def __init__(self):
+    def __init__(self, set_no, system_ram_mb):
         
-        self.folder_name = 'D:\\01_featureMatchingDatasets'
+        self.folder_name = os.path.join( os.path.dirname( os.getcwd() ), '01_featureMatchingDatasets' )
         
         self.file_name_train = os.path.join(self.folder_name, 'yfcc-sift-2000-train.hdf5')
         self.file_name_val = os.path.join(self.folder_name, 'yfcc-sift-2000-val.hdf5')
         self.file_name_test = os.path.join(self.folder_name, 'yfcc-sift-2000-test.hdf5')
         
-        self.parent_folder_name_pickle = 'D:\\01_featureMatchingDatasets'
-        self.pickle_set_no = 1
+        self.parent_folder_name_pickle = os.path.join( os.path.dirname( os.getcwd() ), '01_featureMatchingDatasets' )
+        self.pickle_set_no = set_no
         self.folder_name_pickle = os.path.join(self.parent_folder_name_pickle, str(self.pickle_set_no))
         
-        self.num_workers = 3
+        self.num_workers = 7
         # self.num_workers = 0
         
-        self.system_ram_mb = 2_000
+        self.system_ram_mb = system_ram_mb
         self.n_image_pairs_train = self.get_total_data_length( 'train' )
         self.s_each_image_pair_apprx_mb = 0.05  
         self.s_t_image_pair_apprx_mb = self.n_image_pairs_train * self.s_each_image_pair_apprx_mb * ( self.num_workers + 1 )
@@ -105,6 +105,11 @@ class ConvertHDF5toPickle:
         
 if __name__ == '__main__':
     
-    convertHDF5toPickle = ConvertHDF5toPickle()
-    convertHDF5toPickle.convert_hdf5_to_pickle()
+    set_nos = [2, 1, 0]
+    system_ram_mbs = [30000, 60000, 240000]
+    
+    for set_no, system_ram_mb in zip(set_nos, system_ram_mbs):
+        
+        convertHDF5toPickle = ConvertHDF5toPickle(set_no, system_ram_mb)
+        convertHDF5toPickle.convert_hdf5_to_pickle()
         
