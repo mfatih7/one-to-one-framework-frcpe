@@ -1,3 +1,7 @@
+This repo contains Python scripts from [OANET](https://github.com/zjhthu/OANet) repo.
+
+The trained models can be downloaded from [here](https://drive.google.com/drive/folders/1j5z-FdzlgzZMB9qxcNyps2j61PjLYnqY?usp=sharing).
+
 ## Download OANET Repo and YFCC Dataset
 
 Clone the [OANET](https://github.com/zjhthu/OANet) repo.
