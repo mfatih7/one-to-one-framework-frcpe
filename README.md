@@ -25,7 +25,27 @@ Clone the current [one-to-one-framework-frcpe](https://github.com/mfatih7/one-to
 
 Generate a folder named `01_featureMatchingDatasets` to the same directory level with the cloned `one-to-one-framework-frcpe` repo folder.
 
-Copy the generated `yfcc-sift-2000-train.hdf5`, `yfcc-sift-2000-val.hdf5`, and `yfcc-sift-2000-test.hdf5` files into `01_featureMatchingDatasets` folder.
+Copy previously generated `yfcc-sift-2000-train.hdf5`, `yfcc-sift-2000-val.hdf5`, and `yfcc-sift-2000-test.hdf5` files into `01_featureMatchingDatasets` folder.
+
+To generate pickle files run
+
+```
+python convertHDF5toPickle.py
+```
+
+This may take a couple of hours.
+The script generates 3 sets of pickle files.
+
+For each of train, validation, and test operations:
+- 8 pickle files are generated for set 2,
+- 4 pickle files are generated for set 1,
+- 1 pickle file is generated for set 0.
+
+The sets are proper for different TPU operations.
+
+- Set 2 is proper for multi-core TPUv2 and TPUv3 operations.
+- Set 1 is proper for multi-core TPUv4 operations.
+- Set 0 is proper for SPMD and single-core operations.
 
 
 
