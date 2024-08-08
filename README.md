@@ -53,12 +53,19 @@ The sets are proper for different TPU operations.
 
 For GPU operations, a set can be chosen with respect to the main memory capacity of the machine.
 
-## Generate Google Cloud TPU Virtual Machines and Cloud Storage Bucket
+## Generate Google Cloud TPU Virtual Machine and Cloud Storage Bucket
 
 Check out the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO3KTIlhfHuFwYWJCSY2RIYuKO) to determine the TPU version you need. TPUv4 is sufficient for all.
 
 Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Research Cloud](https://sites.research.google/trc/about/) can be helpful.
 
+## Copy the Generated Dataset Files into the Bucket
+
+...
+
+## Clone This Repo into TPU-VM and Generete Python Environment
+
+...
 
 
 
