@@ -59,6 +59,8 @@ Check out the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO
 
 Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Research Cloud](https://sites.research.google/trc/about/) can be helpful.
 
+While generating TPU VMs [generate_tpu_vm.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/tpu_related/generate_tpu_vm/generate_tpu_vm.py) can be helpful.
+
 ## Copy the Generated Dataset Files into the Bucket
 
 ...
