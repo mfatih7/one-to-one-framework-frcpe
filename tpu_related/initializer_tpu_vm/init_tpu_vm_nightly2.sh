@@ -2,10 +2,11 @@
 
 # DO NOT FORGET TO CONVERT UNIX (LF) USING NOTEPAD++
 
-sudo apt-get update && sudo apt-get install -y python3-opencv
+sudo apt-get update && sudo apt-get install -y python3.10 python3.10-venv python3.10-dev python3-opencv
 
-python3 -m virtualenv ~/env3_8
-source ~/env3_8/bin/activate
+# Create a virtual environment using Python 3.10
+python3.10 -m venv ~/env3_10
+source ~/env3_10/bin/activate
 
 pip install --upgrade pip
 
@@ -18,8 +19,14 @@ pip list
 
 #pip install torch~=2.1.0 torch_xla[tpu]~=2.1.0 -f https://storage.googleapis.com/libtpu-releases/index.html
 
-pip3 install https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch-nightly-cp38-cp38-linux_x86_64.whl
-pip3 install https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-nightly-cp38-cp38-linux_x86_64.whl
+# pip3 install https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch-nightly-cp38-cp38-linux_x86_64.whl
+# pip3 install https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-nightly-cp38-cp38-linux_x86_64.whl
+
+# pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
+# pip3 install https://storage.googleapis.com/pytorch-xla-releases/wheels/cuda/12.1/torch_xla-nightly-cp310-cp310-linux_x86_64.whl
+
+pip3 install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cpu
+pip install 'torch_xla[tpu] @ https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-nightly-cp310-cp310-linux_x86_64.whl' -f https://storage.googleapis.com/libtpu-releases/index.html
 
 pip list
 

@@ -1,0 +1,15 @@
+
+google-cloud-storage
+pandas
+matplotlib
+seaborn
+numpy
+eigen
+h5py
+plotly
+ipython
+deepdish
+torchsummary
+torchmetrics
+thop
+opencv-python-headless
