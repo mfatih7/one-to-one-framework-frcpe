@@ -2,7 +2,10 @@
 
 # DO NOT FORGET TO CONVERT UNIX (LF) USING NOTEPAD++
 
-sudo apt-get update && sudo apt-get install -y python3.10 python3.10-venv python3.10-dev python3-opencv
+# Update package list and install necessary packages for Python 3.10
+sudo apt-get update && sudo apt-get install -y software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update && sudo apt-get install -y python3.10 python3.10-venv python3.10-dev
 
 # Create a virtual environment using Python 3.10
 python3.10 -m venv ~/env3_10
