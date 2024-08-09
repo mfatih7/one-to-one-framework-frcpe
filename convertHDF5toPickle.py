@@ -6,13 +6,13 @@ import pickle
 class ConvertHDF5toPickle:
     def __init__(self, set_no, system_ram_mb):
         
-        self.folder_name = os.path.join( os.path.dirname( os.getcwd() ), '01_featureMatchingDatasets' )
+        self.folder_name = os.path.join( os.path.dirname( os.getcwd() ), '01_datasets' )
         
         self.file_name_train = os.path.join(self.folder_name, 'yfcc-sift-2000-train.hdf5')
         self.file_name_val = os.path.join(self.folder_name, 'yfcc-sift-2000-val.hdf5')
         self.file_name_test = os.path.join(self.folder_name, 'yfcc-sift-2000-test.hdf5')
         
-        self.parent_folder_name_pickle = os.path.join( os.path.dirname( os.getcwd() ), '01_featureMatchingDatasets' )
+        self.parent_folder_name_pickle = os.path.join( os.path.dirname( os.getcwd() ), '01_datasets' )
         self.pickle_set_no = set_no
         self.folder_name_pickle = os.path.join(self.parent_folder_name_pickle, str(self.pickle_set_no))
         

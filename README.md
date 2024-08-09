@@ -27,9 +27,9 @@ This may take a couple of hours.
 
 Clone the current [one-to-one-framework-frcpe](https://github.com/mfatih7/one-to-one-framework-frcpe) repo.
 
-Generate a folder named `01_featureMatchingDatasets` to the same directory level with the cloned `one-to-one-framework-frcpe` repo folder.
+Generate a folder named `01_datasets` to the same directory level with the cloned `one-to-one-framework-frcpe` repo folder.
 
-Copy previously generated `yfcc-sift-2000-train.hdf5`, `yfcc-sift-2000-val.hdf5`, and `yfcc-sift-2000-test.hdf5` files into `01_featureMatchingDatasets` folder.
+Copy previously generated `yfcc-sift-2000-train.hdf5`, `yfcc-sift-2000-val.hdf5`, and `yfcc-sift-2000-test.hdf5` files into `01_datasets` folder.
 
 To generate pickle files, run
 
