@@ -2,8 +2,7 @@
 
 # DO NOT FORGET TO CONVERT UNIX (LF) USING NOTEPAD++
 
-# sudo apt-get update && sudo apt-get install -y python3-opencv
-sudo apt-get update
+sudo apt-get update && sudo apt-get install
 
 python3 -m virtualenv ~/env3_8
 source ~/env3_8/bin/activate
