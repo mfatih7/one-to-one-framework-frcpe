@@ -231,10 +231,7 @@ class Config:
                                     self.pickle_set_no = 3
                                 else:
                                     self.pickle_set_no = 2
-                                if( self.en_tl_on_cpu == 0):
-                                    self.num_workers = 1
-                                else:
-                                    self.num_workers = 8                      
+                                self.num_workers = 1                      
                         self.input_path_pickle_local = os.path.join( self.input_path_local, str(self.pickle_set_no) )
                         self.input_path_pickle_bucket = os.path.join( self.input_path_bucket, str(self.pickle_set_no) )
                         self.n_chunk_files = self.get_n_chunks_from_files()

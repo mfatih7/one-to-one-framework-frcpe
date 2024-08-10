@@ -339,14 +339,6 @@ class CorrespondencesDataset(Dataset):
                         context = xs.copy()
                         
                         if( self.config.en_batch_build_with_context == 1 ):
-
-                            if(self.config.en_tl_on_cpu==1):
-                                x_tl = context[np.newaxis, :, :, :]
-
-                                with torch.no_grad():
-                                    context = self.tl_model( torch.from_numpy( x_tl ) )
-                                context = context.numpy()
-                                context = np.squeeze(context, axis=1)            
                                     
                             xs_1 = np.tile( context, (self.N, 1, 1) )
                             xs_1 = xs_1[:, np.newaxis, :, :]
