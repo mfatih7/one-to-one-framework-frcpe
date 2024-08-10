@@ -2,6 +2,7 @@ This repo contains Python scripts from [OANET](https://github.com/zjhthu/OANet) 
 
 The trained models can be downloaded from [here](https://drive.google.com/drive/folders/1j5z-FdzlgzZMB9qxcNyps2j61PjLYnqY?usp=sharing).
 
+
 ## Download OANET Repo and YFCC Dataset
 
 Clone the [OANET](https://github.com/zjhthu/OANet) repo to your local machine.
@@ -13,6 +14,8 @@ Generate raw_data folder in cloned OANET folder with:
 cat raw_data* > combined_file.tar.gz
 tar -xvzf combined_file.tar.gz
 ```
+
+
 ## Generate .hdf5 Files
 
 Generate .hdf5 Files using the scripts in OANET folder:
@@ -22,6 +25,7 @@ python extract_feature.py
 python yfcc.py
 ```
 This may take a couple of hours.
+
 
 ## Generate pickle files from .hdf5 Files
 
@@ -54,6 +58,7 @@ The sets are proper for different TPU operations.
 
 For GPU operations, a set can be chosen with respect to the main memory capacity of the machine.
 
+
 ## Generate Google Cloud TPU Virtual Machine and Cloud Storage Bucket
 
 Explore the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO3KTIlhfHuFwYWJCSY2RIYuKO) to determine the TPU version you need. TPUv4 is sufficient for all model types.
@@ -62,11 +67,13 @@ Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Rese
 
 To generate a TPU VM using Google Cloud CLI, the script [generate_tpu_vm.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/tpu_related/generate_tpu_vm/generate_tpu_vm.py) can be used.
 
+
 ## Copy the Generated Dataset Folder into the Bucket
 
 Copy the `01_datasets` folder into Bucket using the Bucket GUI or Google Cloud CLI.
 
 You can also copy the folder into each TPU-VM, but Buckets are more manageable and storage-friendly.
+
 
 ## Clone This Repo into TPU-VM and Generate Python Environment
 
@@ -92,9 +99,11 @@ bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nig
 
 Be aware that [PyTorch/XLA](https://github.com/pytorch/xla) is still being developed, be careful about the updates.
 
+
 ## Testing the Pre-Trained Models
 
 ...
+
 
 ## Training Your Own Models
 
