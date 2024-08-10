@@ -94,11 +94,6 @@ class CorrespondencesDataset(Dataset):
         self.mutuals_chunk = data_chunk[3]
         self.R_chunk = data_chunk[4]
         self.t_chunk = data_chunk[5]
-
-        if(self.config.input_type == '1_to_1' and self.config.en_tl_on_cpu==1):
-            import models.models_tl_cpu
-            self.tl_model = models.models_tl_cpu.get_model( self.config, self.N, )
-            self.tl_model.eval()
         
         print('Size of ' + self.train_val_test + ' dataset is ' + str(self.size_dataset) )
 
