@@ -25,7 +25,7 @@ This may take a couple of hours.
 
 ## Generate pickle files from .hdf5 Files
 
-Clone the current [one-to-one-framework-frcpe](https://github.com/mfatih7/one-to-one-framework-frcpe) repo.
+Clone the current [one-to-one-framework-frcpe](https://github.com/mfatih7/one-to-one-framework-frcpe) repo to your local machine.
 
 Generate a folder named `01_datasets` to the same directory level with the cloned `one-to-one-framework-frcpe` repo folder.
 
