@@ -75,6 +75,24 @@ Clone this Repo into TPU-VM using
 git clone https://github.com/mfatih7/one-to-one-framework-frcpe.git
 ```
 
+Use the script below to generate an environment in which all of the networks are trained in this study.
+
+```
+bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nightly.sh
+```
+
+This environment does not have TPU-lowered implementations of [some functions](https://github.com/pytorch/xla/issues/6017).
+
+Use the script below to generate a newer environment (with nightly torch, torchvision, and torch_xla) that does not have lowering issues.
+
+```
+bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nightly_latest.sh
+```
+
+Be aware that [PyTorch/XLA](https://github.com/pytorch/xla) is still being developed, be careful about the updates.
+
+
+
 
 
 
