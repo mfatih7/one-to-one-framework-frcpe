@@ -7,25 +7,8 @@ from models.models_convmatch_plus import get_model_convmatch_plus as convmatch_g
 from models.models_CLNet import get_model_CLNet as CLNet_get_model
 from models.models_MS2DGNET import get_model_MS2DGNET as MS2DGNET_get_model
 
-from models.models_exp import get_model as model_exp_get_model
-from models.models_exp2 import get_model as model_exp2_get_model
-from models.models_exp3 import get_model as model_exp3_get_model
 from models.models_exp4 import get_model as model_exp4_get_model
-from models.models_exp5 import get_model as model_exp5_get_model
-from models.models_exp6 import get_model as model_exp6_get_model
-from models.models_exp7 import get_model as model_exp7_get_model
-from models.models_exp8 import get_model as model_exp8_get_model
-from models.models_exp9 import get_model as model_exp9_get_model
-from models.models_exp10 import get_model as model_exp10_get_model
-from models.models_exp11 import get_model as model_exp11_get_model
 from models.models_exp12 import get_model as model_exp12_get_model
-from models.models_exp13 import get_model as model_exp13_get_model
-from models.models_exp14 import get_model as model_exp14_get_model
-from models.models_exp15 import get_model as model_exp15_get_model
-from models.models_exp20 import get_model as model_exp20_get_model
-from models.models_exp21 import get_model as model_exp21_get_model
-from models.models_exp22 import get_model as model_exp22_get_model
-from models.models_exp23 import get_model as model_exp23_get_model
 
 import torch
 from torchsummary import summary
