@@ -109,8 +109,6 @@ def load_checkpoint( config, device, model, optimizer, chkpt_mgr=None ):
                     chkpt_mgr.restore( max(tracked_steps), checkpoint )
                     print( f"Loaded checkpoint step {max(tracked_steps)} for SPMD operation" )
                     break
-            
-    if(config.device == 'tpu' ):
     
     epoch = checkpoint['epoch']
     chunk = checkpoint['chunk']

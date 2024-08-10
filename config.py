@@ -10,7 +10,7 @@ class Config:
         
         self.device = 'cpu'
         self.device = 'cuda'
-        # self.device = 'tpu'
+        self.device = 'tpu'
         
         self.tpu_cores = 'single'
         self.tpu_cores = 'multi'
