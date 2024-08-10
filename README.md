@@ -61,13 +61,21 @@ Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Rese
 
 While generating TPU VMs [generate_tpu_vm.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/tpu_related/generate_tpu_vm/generate_tpu_vm.py) can be helpful.
 
-## Copy the Generated Dataset Files into the Bucket
+## Copy the Generated Dataset Folder into the Bucket
 
-...
+Copy the `01_datasets` folder into Bucket using the Bucket GUI or Google Cloud CLI.
 
-## Clone This Repo into TPU-VM and Generete Python Environment
+You can also copy the folder into each TPU-VM, but Buckets are more manageable and storage-friendly.
 
-...
+## Clone This Repo into TPU-VM and Generate Python Environment
+
+Clone this Repo into TPU-VM using
+
+```
+git clone https://github.com/mfatih7/one-to-one-framework-frcpe.git
+```
+
+
 
 
 
