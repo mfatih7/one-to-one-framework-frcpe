@@ -6,7 +6,7 @@ class Config:
     def __init__(self):
         
         self.operation = 'train'
-        self.operation = 'test'
+        # self.operation = 'test'
         
         self.device = 'cpu'
         self.device = 'cuda'
@@ -29,12 +29,13 @@ class Config:
             
             self.home_dir = os.path.expanduser('~')
             
+            self.input_data_storage_local_or_bucket = 'local'
             self.input_data_storage_local_or_bucket = 'bucket'
             
             self.tpu_version = 'v2'
             self.tpu_version = 'v3'
             self.tpu_version = 'v4'
-            self.tpu_version = 'v4pre'
+            # self.tpu_version = 'v4pre'
             
             if( self.tpu_version == 'v2' ):
                 self.bucket_name = 'bucket-us-central1-relativeposeestimation'  # v2
@@ -61,69 +62,25 @@ class Config:
         
         self.first_experiment = 100
         
-        # self.model_type = 'CNN_Plain'
-        # self.model_type = 'CNN_Residual'
-        # self.model_type = 'CNN_Residual_Context'        
-        # self.model_type = 'MobileNetV1'
-        # self.model_type = 'MobileNetV2'
-        # self.model_type = 'MobileNetV3'
+        # self.model_type = 'model_EOT'
+        # self.model_exp_no = 0         # narrow
+        # self.model_exp_no = 100       # wide
         
-        # self.model_type = 'model_exp'
-        # self.model_exp_no = 0
+        # self.model_type = 'model_CNN_cont_0'
+        # self.model_exp_no = 0         # narrow
+        # self.model_exp_no = 100       # wide
         
-        # self.model_type = 'model_exp2'
-        # self.model_exp_no = 0
+        # self.model_type = 'model_CNN_cont_1'
+        # self.model_exp_no = 0         # narrow
+        # self.model_exp_no = 100       # wide
         
-        # self.model_type = 'model_exp3'
-        # self.model_exp_no = 1
+        # self.model_type = 'model_CNN_cont_2'
+        # self.model_exp_no = 0         # narrow
+        # self.model_exp_no = 100       # wide
         
-        # self.model_type = 'model_exp4'
-        # self.model_exp_no = 21
-        
-        # self.model_type = 'model_exp5'
-        # self.model_exp_no = 1
-        
-        # self.model_type = 'model_exp6'
-        # self.model_exp_no = 1
-        
-        # self.model_type = 'model_exp7'
-        # self.model_exp_no = 1
-
-        # self.model_type = 'model_exp8'
-        # self.model_exp_no = 1
-        
-        # self.model_type = 'model_exp9'
-        # self.model_exp_no = 1
-        
-        # self.model_type = 'model_exp10'
-        # self.model_exp_no = 1
-        
-        # self.model_type = 'model_exp11'
-        # self.model_exp_no = 1
-        
-        # self.model_type = 'model_exp12'
-        # self.model_exp_no = 0
-        
-        # self.model_type = 'model_exp13'
-        # self.model_exp_no = 0
-        
-        # self.model_type = 'model_exp14'
-        # self.model_exp_no = 0
-        
-        # self.model_type = 'model_exp15'
-        # self.model_exp_no = 0
-        
-        # self.model_type = 'model_exp20'
-        # self.model_exp_no = 4  #0,1,3,4,10,11,13,14,20,21,23,24   
-        
-        # self.model_type = 'model_exp21'
-        # self.model_exp_no = 0  # 0, 10,
-        
-        # self.model_type = 'model_exp22'
-        # self.model_exp_no = 4  #0,1,3,4,10,11,13,14,20,21,23,24
-        
-        # self.model_type = 'model_exp23'
-        # self.model_exp_no = 324  #0,1,3,4,10,11,13,14,20,21,23,24
+        # self.model_type = 'model_CNN_cont_3'
+        # self.model_exp_no = 0         # narrow
+        # self.model_exp_no = 100       # wide
         
         self.model_type = 'LTFGC'
         # self.model_type = 'OANET'
@@ -142,24 +99,17 @@ class Config:
             self.data_ordering_type = 1 # random selection of repeated elements, no ordering
         else:
             self.input_type = '1_to_1'
-            if(self.model_type != 'model_exp20' and self.model_type != 'model_exp21' and self.model_type != 'model_exp22' ):
-                self.en_batch_build_with_context = 1    # No context information is needed from dataset when LTFGC type models are used as preprocessing
-            else:
-                self.en_batch_build_with_context = 0    # No context information is needed from dataset when LTFGC type models are used as preprocessing
-
-            if( self.model_type == 'model_exp23' ):
-                self.en_tl_on_cpu = 1
-            else:
-                self.en_tl_on_cpu = 0
+            
+            self.en_batch_build_with_context = 1    # No context information is needed from dataset when LTFGC type models are used as preprocessing
                 
-            if( self.model_type == 'model_exp15' ):
+            if( self.model_type == 'model_CNN_cont_2' ):
                 self.context_type_for_all_candidates_of_sample = 1 # Closer context together  wrt euclidean distance 
             else:
                 self.context_type_for_all_candidates_of_sample = 0
             
-            if( self.model_type == 'model_exp14' ):
+            if( self.model_type == 'model_CNN_cont_3' ):
                 self.data_ordering_type = 2 # random selection of repeated elements, ordering wrt respect to magnitude of disparity
-            elif( self.model_type == 'model_exp13' or self.model_type == 'model_exp15' ):
+            elif( self.model_type == 'model_CNN_cont_1' or self.model_type == 'model_CNN_cont_2' ):
                 self.data_ordering_type = 1 # random selection of repeated elements, no ordering
             else:
                 self.data_ordering_type = 0 # no random selection, no ordering
@@ -174,7 +124,7 @@ class Config:
         self.ess_loss = 'geo_loss'
         # self.ess_loss = 'ess_loss'
         
-        # training_params ->   [model_type(n_to_n, 1_to_1), N_images_in_batch, N, batch_size]
+        # training_params ->   [N_images_in_batch, N, batch_size]
         
         if( self.input_type == '1_to_1'):
             # self.training_params = [ [ 1, 512, 64, ],  ]        
@@ -207,10 +157,8 @@ class Config:
             self.input_channel_count = 2
             
         if(self.tpu_cores == 'spmd'):
-            if(self.model_type == 'model_exp20' or self.model_type == 'model_exp21' or self.model_type == 'model_exp22'):
-                self.spmd_type = 'model'
-            else:
-                self.spmd_type = 'batch'
+            # self.spmd_type = 'model'
+            self.spmd_type = 'batch'
         
         self.use_hdf5_or_picle = 'hdf5'
         self.use_hdf5_or_picle = 'pickle'
@@ -222,7 +170,7 @@ class Config:
         if( self.device == 'tpu' ):
             os.chdir( os.path.join(self.home_dir, 'one-to-one-framework-frcpe') )
         
-        self.input_path_bucket = '01_datasets' 
+        self.input_path_bucket = '01_featureMatchingDatasets' 
         self.input_path_local = os.path.join('..', self.input_path_bucket)                
         
         self.output_folder_name = '08_outputs'
@@ -286,7 +234,7 @@ class Config:
                                 if( self.en_tl_on_cpu == 0):
                                     self.num_workers = 1
                                 else:
-                                    self.num_workers = 8          ###########################################################                      
+                                    self.num_workers = 8                      
                         self.input_path_pickle_local = os.path.join( self.input_path_local, str(self.pickle_set_no) )
                         self.input_path_pickle_bucket = os.path.join( self.input_path_bucket, str(self.pickle_set_no) )
                         self.n_chunk_files = self.get_n_chunks_from_files()
@@ -420,11 +368,6 @@ class Config:
         if(self.output_data_storage_local_or_bucket == 'bucket'):
             self.output_path_bucket = os.path.join(self.output_path_bucket, f'{experiment:04d}')
             print(self.output_path_bucket)
-            
-    def start_multi_loss_training_from_start(self):        
-        if( ( (self.model_type == 'model_exp20' or self.model_type == 'model_exp22' ) and self.model_exp_no >=200) or
-            ( self.model_type == 'model_exp23' ) ):
-            self.n_epochs[-1] = 0 # if tl is active do not train only cls
         
     def copy_output_folder_from_bucket_to_local(self):
         import subprocess

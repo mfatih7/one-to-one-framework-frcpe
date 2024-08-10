@@ -152,8 +152,6 @@ def train_and_val(
             start_time_train = time.perf_counter()
         
             model.train()
-            
-            set_tl_block_eval_mode(config, model)
 			
 			# print( 'Device is ' + xm.xla_real_devices( [  str(device)])[0] )        
             

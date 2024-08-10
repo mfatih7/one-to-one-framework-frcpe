@@ -73,8 +73,6 @@ if __name__ == '__main__':
         
     if( config.tpu_cores == 'spmd' ):
         chkpt_mgr = checkpoint.get_chkpt_mgr(config)
-        
-        config.start_multi_loss_training_from_start()
     
     N_images_in_batch = config.training_params[0][0]
     N = config.training_params[0][1]
