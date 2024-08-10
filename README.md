@@ -92,6 +92,14 @@ bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nig
 
 Be aware that [PyTorch/XLA](https://github.com/pytorch/xla) is still being developed, be careful about the updates.
 
+## Testing the Pre-Trained Models
+
+...
+
+## Training Your Own Models
+
+...
+
 
 
 
