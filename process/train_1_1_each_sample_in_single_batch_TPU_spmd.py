@@ -8,7 +8,6 @@ from datasets.datasets import collate_fn2
 
 from models.models import get_model
 from models.models import get_model_structure
-from models.models import set_tl_block_eval_mode
 
 from samplers.CustomBatchSampler import get_sampler
 
