@@ -4,11 +4,11 @@ The trained models can be downloaded from [here](https://drive.google.com/drive/
 
 ## Download OANET Repo and YFCC Dataset
 
-Clone the [OANET](https://github.com/zjhthu/OANet) repo.
+Clone the [OANET](https://github.com/zjhthu/OANet) repo to your local machine.
 
 Download [YFCC Dataset](https://drive.google.com/drive/folders/1xrc6ZuCOGYwno1DEIfK-jbvZGqK4Oc79) into cloned OANET folder.
 
-Generate raw_data folder in cloned OANET folder with.
+Generate raw_data folder in cloned OANET folder with:
 ```
 cat raw_data* > combined_file.tar.gz
 tar -xvzf combined_file.tar.gz
