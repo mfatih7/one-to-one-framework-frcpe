@@ -55,11 +55,11 @@ For GPU operations, a set can be chosen with respect to the main memory capacity
 
 ## Generate Google Cloud TPU Virtual Machine and Cloud Storage Bucket
 
-Check out the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO3KTIlhfHuFwYWJCSY2RIYuKO) to determine the TPU version you need. TPUv4 is sufficient for all model types.
+Explore the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO3KTIlhfHuFwYWJCSY2RIYuKO) to determine the TPU version you need. TPUv4 is sufficient for all model types.
 
 Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Research Cloud](https://sites.research.google/trc/about/) can be helpful.
 
-While generating TPU VMs [generate_tpu_vm.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/tpu_related/generate_tpu_vm/generate_tpu_vm.py) can be helpful.
+To generate a TPU VM using Google Cloud CLI, the script [generate_tpu_vm.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/tpu_related/generate_tpu_vm/generate_tpu_vm.py) can be used.
 
 ## Copy the Generated Dataset Folder into the Bucket
 
@@ -81,9 +81,9 @@ Use the script below to generate an environment in which all of the networks are
 bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nightly.sh
 ```
 
-This environment does not have TPU-lowered implementations of [some functions](https://github.com/pytorch/xla/issues/6017).
+This environment (Python 3.8) does not have TPU-lowered implementations of [some functions](https://github.com/pytorch/xla/issues/6017).
 
-Use the script below to generate a newer environment (with nightly torch, torchvision, and torch_xla) that does not have lowering issues.
+Use the script below to generate a newer environment (with Python 3.10, nightly torch, torchvision, and torch_xla) that does not have lowering issues.
 
 ```
 bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nightly_latest.sh
