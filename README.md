@@ -34,6 +34,7 @@ Copy previously generated `yfcc-sift-2000-train.hdf5`, `yfcc-sift-2000-val.hdf5`
 To generate pickle files, run
 
 ```
+cd one-to-one-framework-frcpe
 python convertHDF5toPickle.py
 ```
 
