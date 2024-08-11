@@ -113,6 +113,8 @@ Download pre-trained models from [here](https://drive.google.com/drive/folders/1
 
 Copy the extracted `08_outputs` folder to the same folder level as the `one-to-one-framework-frcpe` repo folder.
 
+Select the [test operation](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L9) in [config.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py).
+
 Modify [experiment_no](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L63), [model_type, model_exp_no](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L65-L92) [operation, device](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L17) in [config.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py) according to the preferences of pre-trained models in experiments.txt file in `08_outputs` folder.
 
 Use [run_test_TPU.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_test_TPU.py) for TPU tests and [run_test.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_test_TPU.py) for GPU or CPU tests.
@@ -125,6 +127,8 @@ Explore the results and plots in the `08_outputs` folder.
 
 ...
 
+
+## Testing Your Own Models
 
 
 
