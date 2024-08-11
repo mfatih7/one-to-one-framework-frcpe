@@ -63,8 +63,8 @@ class Config:
         self.experiment_no = 100
         
         # self.model_type = 'model_EOT'
-        # self.model_exp_no = 0         # narrow
-        # self.model_exp_no = 100       # wide
+        # self.model_exp_no = 21       # narrow
+        # self.model_exp_no = 31       # wide
         
         # self.model_type = 'model_CNN_cont_0'
         # self.model_exp_no = 0         # narrow
