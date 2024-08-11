@@ -60,7 +60,7 @@ class Config:
             self.input_data_storage_local_or_bucket = 'local'
             self.output_data_storage_local_or_bucket = 'local'
         
-        self.first_experiment = 100
+        self.experiment_no = 100
         
         # self.model_type = 'model_EOT'
         # self.model_exp_no = 0         # narrow

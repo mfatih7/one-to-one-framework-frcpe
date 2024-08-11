@@ -4,7 +4,7 @@ import checkpoint
 
 config = get_config()
 
-experiment = config.first_experiment
+experiment = config.experiment_no
 
 config.update_output_folder(experiment)
 

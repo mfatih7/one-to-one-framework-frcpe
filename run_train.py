@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     config = get_config()
     
-    experiment_no = config.first_experiment
+    experiment_no = config.experiment_no
     
     config.copy_config_file_to_output_folder(experiment_no)
     

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     
     config = get_config()
     
-    experiment_no = config.first_experiment
+    experiment_no = config.experiment_no
     
     config.update_output_folder(experiment_no)
     if(config.input_type=='1_to_1'):

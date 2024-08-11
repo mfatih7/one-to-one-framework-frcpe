@@ -42,7 +42,7 @@ if __name__ == '__main__':
     set_env_variables_for_TPU.set_env_debug_variables_for_TPU_PJRT( config )
     
     if(len(sys.argv)>=4):
-        config.first_experiment = arg_first_experiment
+        config.experiment_no = arg_first_experiment
         config.model_type = arg_model_type
         config.model_exp_no = arg_model_exp_no
         
@@ -52,10 +52,10 @@ if __name__ == '__main__':
             if(len(sys.argv)==7):
                 config.momentum = arg_momentum
         if(config.optimizer_type == 'SGD'):
-            print(f'For TPUv4 Preempt run first_experiment is {config.first_experiment}, model_type is {config.model_type}, '
+            print(f'For TPUv4 Preempt run experiment is {config.experiment_no}, model_type is {config.model_type}, '
                   f'model_exp_no is {config.model_exp_no}, optimizer is {config.optimizer_type}, learning_rate is {config.learning_rate}, momentum is {config.momentum}')
         else:
-            print(f'For TPUv4 Preempt run first_experiment is {config.first_experiment}, model_type is {config.model_type}, '
+            print(f'For TPUv4 Preempt run experiment is {config.experiment_no}, model_type is {config.model_type}, '
                   f'model_exp_no is {config.model_exp_no}, optimizer is {config.optimizer_type}, learning_rate is {config.learning_rate}')
     elif(len(sys.argv)==1):
         if(config.output_data_storage_local_or_bucket == 'bucket'):
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     else:
         raise ValueError(f"The provided arguments are not valid: {len(sys.argv)}")
     
-    experiment_no = config.first_experiment
+    experiment_no = config.experiment_no
     
     config.copy_config_file_to_output_folder( experiment_no )
     
