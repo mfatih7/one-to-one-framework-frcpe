@@ -115,20 +115,35 @@ Copy the extracted `08_outputs` folder to the same folder level as the `one-to-o
 
 Select the [test operation](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L9) in [config.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py).
 
-Modify [experiment_no](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L63), [model_type, model_exp_no](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L65-L92) [operation, device](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L17) in [config.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py) according to the experiments.txt file in `08_outputs` folder.
+Modify [experiment_no](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L63), [model_type, model_exp_no](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L65-L92) [operation, device](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L17) in [config.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py) according to the preferences of pre-trained models in experiments.txt file in `08_outputs` folder.
 
 Use [run_test_TPU.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_test_TPU.py) for TPU tests and [run_test.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_test_TPU.py) for GPU or CPU tests.
 
 Use [run_find_best_test_checkpoint.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_find_best_test_checkpoint.py) for mAP calculations.
 
-Explore the results and plots in the `08_outputs` folder.
+Explore the results and plots in the `08_outputs` folder of the experiment you selected.
 
 
-## Your Training Runs
+## Running Your Own Training Experiments
 
-...
+Select [train operation](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L9)
+
+Modify [device](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L11-L17), [TPU type](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L35-L38), [data storage media](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L32-L33), [experiment_no](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L63), [model_type](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L65-L92), [side information usage](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L94-L95), [regression loss type](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L106-L107), [N_images_in_batch, N, batch_size, n_epochs and finish_epoch](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L133-L156)
+
+Use [run_train_TPU.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_train_TPU.py) for TPU trainings and [run_train.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_test_TPU.py) for GPU or CPU trainings.
+
+Explore the checkpoints and plots in the `08_outputs` folder of the experiment you selected.
 
 
-## Testing Your Training Runs
+## Testing Your Own Training Experiments
 
-...
+Make sure to reserve your selections in the training phase.
+
+Select [test operation](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L9)
+
+Use [run_test_TPU.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_test_TPU.py) for TPU tests and [run_test.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_test_TPU.py) for GPU or CPU tests.
+
+Use [run_find_best_test_checkpoint.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/run_find_best_test_checkpoint.py) for mAP calculations.
+
+Explore the results and plots in the `08_outputs` folder of the experiment you selected.
+
