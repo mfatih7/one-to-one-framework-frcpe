@@ -90,6 +90,21 @@ class Config:
         # self.model_type = 'convmatch_plus'
         # self.model_type = 'CLNet'
         # self.model_type = 'MS2DGNET'
+
+        self.en_side_info = False
+        self.en_side_info = True
+        
+        if(self.en_side_info == False):
+            self.use_ratio = 0
+            self.use_mutual = 0
+            self.model_width = 4
+        else:
+            self.use_ratio = 2
+            self.use_mutual = 2
+            self.model_width = 6
+        
+        self.ess_loss = 'geo_loss'
+        # self.ess_loss = 'ess_loss'
         
         if( self.model_type == 'LTFGC' or self.model_type == 'OANET' or self.model_type == 'OANET_Iter' or
             self.model_type == 'convmatch' or self.model_type == 'convmatch_plus' or self.model_type == 'CLNet' or self.model_type == 'MS2DGNET' ):
@@ -113,24 +128,8 @@ class Config:
                 self.data_ordering_type = 1 # random selection of repeated elements, no ordering
             else:
                 self.data_ordering_type = 0 # no random selection, no ordering
-
-        self.en_side_info = False
-        self.en_side_info = True
         
-        if(self.en_side_info == False):
-            self.use_ratio = 0
-            self.use_mutual = 0
-            self.model_width = 4
-        else:
-            self.use_ratio = 2
-            self.use_mutual = 2
-            self.model_width = 6
-        
-        self.ess_loss = 'geo_loss'
-        # self.ess_loss = 'ess_loss'
-        
-        # training_params ->   [N_images_in_batch, N, batch_size]
-        
+        # training_params ->   [N_images_in_batch, N, batch_size]        
         if( self.input_type == '1_to_1'):
             # self.training_params = [ [ 1, 512, 64, ],  ]        
             # self.training_params = [ [ 1, 512, 512, ],  ]
