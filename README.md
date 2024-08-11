@@ -102,7 +102,7 @@ Be aware that [PyTorch/XLA](https://github.com/pytorch/xla) is still being devel
 
 ## Testing the Pre-Trained Models
 
-...
+Download pre-trained models from [here](https://drive.google.com/drive/folders/1j5z-FdzlgzZMB9qxcNyps2j61PjLYnqY?usp=sharing) and extract them.
 
 
 ## Training Your Own Models
