@@ -6,7 +6,7 @@ class Config:
     def __init__(self):
         
         self.operation = 'train'
-        # self.operation = 'test'
+        self.operation = 'test'
         
         self.device = 'cpu'
         self.device = 'cuda'
