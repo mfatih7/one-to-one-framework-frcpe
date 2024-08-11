@@ -174,6 +174,7 @@ class Config:
         if( self.device == 'tpu' ):
             os.chdir( os.path.join(self.home_dir, 'one-to-one-framework-frcpe') )
         
+        # self.input_path_bucket = '01_featureMatchingDatasets' 
         self.input_path_bucket = '01_datasets' 
         self.input_path_local = os.path.join('..', self.input_path_bucket)                
         
