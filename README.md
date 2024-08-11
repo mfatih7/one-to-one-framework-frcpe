@@ -100,6 +100,13 @@ bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nig
 Be aware that [PyTorch/XLA](https://github.com/pytorch/xla) is still being developed, be careful about the updates.
 
 
+## Local/Bucket Settiings
+
+If you copy data into the buckets, change [bucket_name](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L40-L54) with respect to the bucket you use.
+
+If you copy data into TPU-VM, activate [input_data_storage_local_or_bucket](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L32-L33) local.
+
+
 ## Testing the Pre-Trained Models
 
 Download pre-trained models from [here](https://drive.google.com/drive/folders/1j5z-FdzlgzZMB9qxcNyps2j61PjLYnqY?usp=sharing) and extract them.
