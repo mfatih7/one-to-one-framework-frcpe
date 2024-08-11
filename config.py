@@ -113,12 +113,17 @@ class Config:
                 self.data_ordering_type = 1 # random selection of repeated elements, no ordering
             else:
                 self.data_ordering_type = 0 # no random selection, no ordering
+
+        self.en_side_info = False
+        self.en_side_info = True
         
-        self.use_ratio = 0  # 0-> don't use, 1-> mask xs and ys, 2-> use as side
-        self.use_mutual = 0  # 0-> don't use, 1-> mask xs and ys, 2-> use as side
-        if(self.use_ratio==0 and self.use_mutual == 0):
+        if(self.en_side_info == False):
+            self.use_ratio = 0
+            self.use_mutual = 0
             self.model_width = 4
         else:
+            self.use_ratio = 2
+            self.use_mutual = 2
             self.model_width = 6
         
         self.ess_loss = 'geo_loss'
