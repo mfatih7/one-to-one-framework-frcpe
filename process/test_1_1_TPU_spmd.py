@@ -77,14 +77,14 @@ def test(
     
 ########################################################################
     
-    n_steps = checkpoint.get_number_of_checkpoint_files_for_test_spmd(config, chkpt_mgr)
+    tracked_steps = checkpoint.get_steps_for_test_spmd(config, chkpt_mgr)
     
-    success_checkpoint = np.zeros( (1, n_steps, config.n_chunks, 4) )
-    loss_checkpoint = np.zeros( (1, n_steps, config.n_chunks, 3) )
-    proc_time_checkpoint = np.zeros( (1, n_steps, config.n_chunks) )
-    mAP_checkpoint = np.zeros( (1, n_steps, config.n_chunks, 3, 360) )
+    success_checkpoint = np.zeros( (1, len(tracked_steps), config.n_chunks, 4) )
+    loss_checkpoint = np.zeros( (1, len(tracked_steps), config.n_chunks, 3) )
+    proc_time_checkpoint = np.zeros( (1, len(tracked_steps), config.n_chunks) )
+    mAP_checkpoint = np.zeros( (1, len(tracked_steps), config.n_chunks, 3, 360) )
     
-    mAP_exact_checkpoint = np.zeros( (1, len(checkpoint_files), config.n_chunks, 3, 3) )
+    mAP_exact_checkpoint = np.zeros( (1, len(tracked_steps), config.n_chunks, 3, 3) )
     
     if(config.n_chunks == 1):
         dataset_test = get_dataset( config, N_images_in_batch, N, batch_size, train_val_test = 'test', chunk=0 )
@@ -101,9 +101,9 @@ def test(
             mp_dataloader_test = pl.MpDeviceLoader( dataloader_test, device, input_sharding=xs.ShardingSpec(input_mesh, (0, 1, 2, 3)), )            
             dataloader_test = mp_dataloader_test
     
-    for epoch in range( n_steps ):
+    for epoch in range( len(tracked_steps) ):
         
-        model = checkpoint.load_test_checkpoint_spmd( config, device, model, optimizer, step=epoch, chkpt_mgr=chkpt_mgr, )
+        model = checkpoint.load_test_checkpoint_spmd( config, device, model, optimizer, step=tracked_steps[epoch], chkpt_mgr=chkpt_mgr, )
     
         for chunk in range(0, config.n_chunks):
         
@@ -195,7 +195,7 @@ def test(
                         print("Exp {} Test Epoch {}/{} Chunk {}/{} Batch {}/{} LR {:.6f} LossCls {:.6f} lGeo {:.6f} LEss {:.6f} CorPred {}/{} Acc {:.6f} Pre {:.6f} Rec {:.6f} F1 {:.6f}"
                                 .format(    experiment_no,
                                             epoch,
-                                            n_steps-1,
+                                            len(tracked_steps)-1,
                                             chunk,
                                             config.n_chunks-1,
                                             i,

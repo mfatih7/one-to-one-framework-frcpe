@@ -21,7 +21,7 @@ def get_checkpoint_template(config, model, optimizer, ):
     loss_checkpoint = np.zeros( (2, config.n_epochs[0], config.n_chunks, 3) )
     proc_time_checkpoint = np.zeros( (2, config.n_epochs[0], config.n_chunks) )
 
-    if( config.device == 'tpu' and config.tpu_cores == 'spmd' ):
+    if( config.device == 'tpu' and config.tpu_cores == 'spmd' and config.operation == 'train'):
         optimizer = make_optimizer_prime_spmd( optimizer, )
 
     checkpoint = {
@@ -213,18 +213,21 @@ def get_all_checkpoint_files_for_test(config):
             
     return checkpoint_files
 
-def get_number_of_checkpoint_files_for_test_spmd(config, chkpt_mgr):
+def get_steps_for_test_spmd(config, chkpt_mgr):
 
     tracked_steps = chkpt_mgr.all_steps()
-    n_steps = len(tracked_steps) - 1 # excluding the initial checkpoint without trained model parameters
-    return n_steps
+
+    if(0 in tracked_steps):     # excluding the initial checkpoint without trained model parameters
+        tracked_steps.remove(0)
+
+    return tracked_steps
 
 def load_test_checkpoint_spmd( config, device, model, optimizer, step, chkpt_mgr, ):
     checkpoint = get_checkpoint_template( config, model, optimizer, )
-    tracked_steps = chkpt_mgr.all_steps()
-    chkpt_mgr.restore( step+1, checkpoint ) # excluding the initial checkpoint without trained model parameters
+    # tracked_steps = chkpt_mgr.all_steps()
+    chkpt_mgr.restore( step, checkpoint ) 
 
-    print( f"Loaded checkpoint step {step+1} for SPMD operation" ) # excluding the initial checkpoint without trained model parameters
+    print( f"Loaded checkpoint step {step} for SPMD operation" )
 
     model.load_state_dict(checkpoint['model_state_dict'])
     model.to(device)    
