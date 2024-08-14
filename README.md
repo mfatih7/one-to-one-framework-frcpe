@@ -61,7 +61,7 @@ For GPU operations, a set can be chosen with respect to the main memory capacity
 
 ## Generate Google Cloud TPU Virtual Machine and Cloud Storage Bucket
 
-Explore the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO3KTIlhfHuFwYWJCSY2RIYuKO) to determine the TPU version you need. TPUv4 is sufficient for all model types.
+Explore the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO3KTIlhfHuFwYWJCSY2RIYuKO) to determine the TPU version you need.
 
 Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Research Cloud](https://sites.research.google/trc/about/) can be helpful.
 
@@ -125,6 +125,8 @@ Explore the results and plots in the `08_outputs` folder of the experiment you s
 
 
 ## Running Your Own Training Experiments
+
+TPUv4 is sufficient for all model types.
 
 Select [train operation](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L8-L9)
 
