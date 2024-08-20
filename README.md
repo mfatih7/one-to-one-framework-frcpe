@@ -45,7 +45,7 @@ python convertHDF5toPickle.py
 This may take a couple of hours.
 The script generates 3 sets of pickle files.
 
-For each of train, validation, and test operations:
+For each of the train, validation, and test operations:
 - 8 pickle files are generated for set 2,
 - 4 pickle files are generated for set 1,
 - 1 pickle file is generated for set 0.
@@ -77,7 +77,7 @@ You can also copy the folder into each TPU-VM, but Buckets are more manageable a
 
 ## Clone This Repo into TPU-VM and Generate Python Environment
 
-Clone this Repo into TPU-VM using
+Clone this Repo into TPU-VM using:
 
 ```
 git clone https://github.com/mfatih7/one-to-one-framework-frcpe.git
@@ -100,7 +100,7 @@ bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nig
 Be aware that [PyTorch/XLA](https://github.com/pytorch/xla) is still being developed, be careful about the updates.
 
 
-## Local/Bucket Settiings
+## Local/Bucket Settings
 
 If you copy data into the buckets, change [bucket_name](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/config.py#L40-L54) with respect to the bucket you use.
 
