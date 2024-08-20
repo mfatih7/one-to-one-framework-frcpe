@@ -61,7 +61,7 @@ For GPU operations, a set can be chosen with respect to the main memory capacity
 
 ## Generate Google Cloud TPU Virtual Machine and Cloud Storage Bucket
 
-Explore the [experiments.txt](https://drive.google.com/drive/folders/1jcBMZOKO3KTIlhfHuFwYWJCSY2RIYuKO) to determine the TPU version you need.
+Explore the [experiments.txt](https://drive.google.com/file/d/1ms2jNu7s60a5_WFhf_mEJAJxjTTAtI4E/view?usp=sharing) to determine the TPU version you need.
 
 Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Research Cloud](https://sites.research.google/trc/about/) can be helpful.
 
