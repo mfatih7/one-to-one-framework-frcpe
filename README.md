@@ -1,4 +1,4 @@
-# One-To-One Framework for Relative Camera Pose Estimation
+# A Novel One-To-One Framework for Relative Camera Pose Estimation
 
 This repository contains the source code for the paper **"A Novel One-To-One Framework for Relative Camera Pose Estimation"**, published in the *IEEE Access Journal*.
 
