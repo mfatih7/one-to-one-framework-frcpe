@@ -1,3 +1,7 @@
+# One-To-One Framework for Relative Camera Pose Estimation
+
+This repository contains the source code for the paper **"A Novel One-To-One Framework for Relative Camera Pose Estimation"**, published in the *IEEE Access Journal*.
+
 ![Mean Average Precison](00_media/mAP5.png)
 
 This repo contains Python scripts from [OANET](https://github.com/zjhthu/OANet) repo.
