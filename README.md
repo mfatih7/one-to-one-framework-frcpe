@@ -1,6 +1,6 @@
 # A Novel One-To-One Framework for Relative Camera Pose Estimation
 
-This repository contains the source code for the paper **"A Novel One-To-One Framework for Relative Camera Pose Estimation"**, published in the *IEEE Access Journal*.
+This repository contains the source code for the paper **"A Novel One-To-One Framework for Relative Camera Pose Estimation"**, published in the *IEEE Access*.
 The experiments are conducted on Google Cloud Tensor Processing Units (TPUs) using [Pytorch XLA](https://github.com/pytorch/xla) library, and the work is supported by [TPU Research Cloud](https://sites.research.google/trc/about/).
 
 ![Mean Average Precison](00_media/mAP5.png)
