@@ -104,6 +104,12 @@ Use the script below to generate a newer environment (with Python 3.10, nightly 
 bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_nightly_latest.sh
 ```
 
+Use the script below to generate a newer environment (with Python 3.10, stable torch, torchvision, and torch_xla) that does not have lowering issues.
+
+```
+bash ~/one-to-one-framework-frcpe/tpu_related/initializer_tpu_vm/init_tpu_vm_stable.sh
+```
+
 Be aware that [PyTorch/XLA](https://github.com/pytorch/xla) is still being developed, be careful about the updates.
 
 
