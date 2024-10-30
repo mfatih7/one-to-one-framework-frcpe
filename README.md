@@ -7,7 +7,7 @@ The experiments are conducted on Google Cloud Tensor Processing Units (TPUs) usi
 
 This repo contains Python scripts from [OANET](https://github.com/zjhthu/OANet) repo.
 
-The trained models can be downloaded from [here](https://drive.google.com/drive/folders/1n2j_9dCmoZXEYyQe9OyscihPm10tFUkL?usp=sharing).
+The trained models can be downloaded from [here](https://drive.google.com/drive/folders/1j5z-FdzlgzZMB9qxcNyps2j61PjLYnqY?usp=sharing).
 
 
 ## Download OANET Repo and YFCC Dataset
