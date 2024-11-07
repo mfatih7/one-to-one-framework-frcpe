@@ -72,6 +72,8 @@ Explore the [experiments.txt](https://drive.google.com/drive/folders/1j5z-Fdzlgz
 
 Obtain a TPU Virtual Machine (TPU-VM) and Google Storage Bucket. Maybe [TPU Research Cloud](https://sites.research.google/trc/about/) can be helpful.
 
+Numerous [publications](https://sites.research.google/trc/publications/) have been produced utilizing TPU chips.
+
 To generate a TPU VM using Google Cloud CLI, the script [generate_tpu_vm.py](https://github.com/mfatih7/one-to-one-framework-frcpe/blob/main/tpu_related/generate_tpu_vm/generate_tpu_vm.py) can be used.
 
 
